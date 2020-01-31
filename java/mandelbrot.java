@@ -3,7 +3,7 @@ import java.util.*;
 class Mandelbrot
 {  
 	static int BAILOUT = 16;
-	static int MAX_ITERATIONS = 1000;
+	static int MAX_ITERATIONS = 10000;
 	
 	private static int iterate(float x, float y)
 	{
