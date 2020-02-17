@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
+	"runtime"
 )
 
 const BAILOUT = 16
@@ -41,5 +42,5 @@ func main() {
 		output += "\n"
 	}
 	var diff = time.Now().Sub(startTime)
-	fmt.Println(output + "\nGo Elapsed " + (diff + time.Second).String())
+	fmt.Println(output + "\nGo " + runtime.Version() + " Elapsed " + (diff + time.Second).String())
 }

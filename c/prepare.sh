@@ -2,4 +2,4 @@
 
 CWD=$(dirname "$0")
 
-cc $CWD/mandelbrot.c -o $CWD/mandelbrot
+gcc $CWD/mandelbrot.c -O2 -o $CWD/mandelbrot
