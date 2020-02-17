@@ -1,0 +1,24 @@
+{
+    "name": "mandelbrot",
+    "version": "1.0.0",
+    "description": "Run a computation of the Mandelbrot set in various languages. The variants are designed to be more or less equivalent, printing the output only at the end to reduce the dependency of I/O to a minimum. Thus, only FP comuputation is measured.",
+    "main": "index.js",
+    "dependencies": {
+        "systeminformation": "^4.21.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node runAll",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jschirrmacher/mandelbrot.git"
+    },
+    "author": "joachim.schirrmacher@gmail.com",
+    "license": "Apache License v2.0",
+    "bugs": {
+        "url": "https://github.com/jschirrmacher/mandelbrot/issues"
+    },
+    "homepage": "https://github.com/jschirrmacher/mandelbrot#readme"
+}
