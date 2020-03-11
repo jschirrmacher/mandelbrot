@@ -1,6 +1,6 @@
 # Mandelbrot - a simple language benchmark
 
-Run a computation of the Mandelbrot set in various languages. The variants are designed to be more or less equivalent, printing the output only at the end to reduce the dependency of I/O to a minimum. Thus, only FP comuputation is measured.
+Runs a computation of the Mandelbrot set in various languages. The variants are designed to be more or less equivalent, printing the output only at the end to reduce the dependency of I/O to a minimum. Thus, only FP comuputation is measured.
 
 To just run the tests for all available languages, simply call `./runAll.sh`
 
@@ -12,12 +12,28 @@ To try a single language, do the following steps:
 
 Naturally, you need to install a compiler and runtime environment for each language you want to use. The `prepare` script calls the compiler with the required parameters, the `run` script executes the program in the desired language and prints out the elapsed time.
 
-On my Macbook Pro 2017, the output of `runAll.sh` is like that:
+I tested on my available MacBook Pros (2014 and 2020) and the output looks like this:
 
-    C Elapsed 0.927386
-    Java Elapsed 0.757
-    JavaScript Node.js v12.14.1 Elapsed 0.739
-    Perl v5.18.4 Elapsed 85.4472191333771
-    PHP 7.3.9 Elapsed 9.605306
-    Python 2.7.16 Elapsed 48.3249
-    Ruby 2.6.3 Elapsed 19.224882
+--------------------------------------------------
+Intel® Core™ i5-4288U 4 cores @2.60GHz
+--------------------------------------------------
+C gcc 4.2.1                                  0.668
+JavaScript Node.js v12.13.0                  0.698
+Go go1.14                                    1.798
+Java 1.8.0_121                               1.801
+PHP 7.3.11                                  12.576
+Ruby 2.6.0                                  22.782
+Python 2.7.16                               49.591
+Perl v5.18.4                               109.905
+
+--------------------------------------------------
+Intel® Core™ i5-8279U 8 cores @2.40GHz
+--------------------------------------------------
+C gcc 4.2.1                                  0.539
+JavaScript Node.js v12.16.1                  0.545
+Java                                         0.745
+Go go1.14                                    1.642
+PHP 7.3.11                                   9.297
+Ruby 2.6.3                                  16.659
+Python 2.7.16                               36.193
+Perl v5.18.4                                80.353
