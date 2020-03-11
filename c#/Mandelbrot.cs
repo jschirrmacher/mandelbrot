@@ -26,7 +26,7 @@ namespace Mandelbrot {
 		}
 
 		static void Main (string[] args) {
-			Date d1 = new Date ();
+			DateTime d1 = DateTime.Now;
 			int x, y;
 			string output = "";
 
@@ -39,8 +39,8 @@ namespace Mandelbrot {
 				}
 				output += "\n";
 			}
-			Date d2 = new Date ();
-			long diff = d2.getTime () - d1.getTime ();
+			DateTime d2 = DateTime.Now;
+			long diff = (long)(d2 - d1).TotalMilliseconds;
 			Console.WriteLine(output + "\nC# Elapsed " + diff / 1000.0f);
 		}
 	}
