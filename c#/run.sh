@@ -1,4 +1,6 @@
 #!/bin/bash
 
 VERSION=$(dotnet --version)
-dotnet run -p Mandalbrot.csproj | sed -e "s/C#/C# ${VERSION}/"
+cd $(dirname "$0")
+dotnet run -p Mandelbrot.csproj | sed -e "s/C#/C# ${VERSION}/"
+cd ..
