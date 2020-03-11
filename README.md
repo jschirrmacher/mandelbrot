@@ -14,6 +14,7 @@ Naturally, you need to install a compiler and runtime environment for each langu
 
 I tested on my available MacBook Pros (2014 and 2020) and the output looks like this:
 
+```
 --------------------------------------------------
 Intel® Core™ i5-4288U 4 cores @2.60GHz
 --------------------------------------------------
@@ -26,7 +27,9 @@ PHP 7.3.11                                  12.576
 Ruby 2.6.0                                  22.782
 Python 2.7.16                               49.591
 Perl v5.18.4                               109.905
+```
 
+```
 --------------------------------------------------
 Intel® Core™ i5-8279U 8 cores @2.40GHz
 --------------------------------------------------
@@ -39,3 +42,4 @@ PHP 7.3.11                                   9.297
 Ruby 2.6.3                                  16.659
 Python 2.7.16                               36.193
 Perl v5.18.4                                80.353
+```
