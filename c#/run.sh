@@ -1,4 +1,4 @@
 #!/bin/bash
 
-VERSION=$(gcc -dumpversion)
-dotnet run -p Mandalbrot.csproj | sed -e "s/C/C gcc ${VERSION}/"
+VERSION=$(dotnet --version)
+dotnet run -p Mandalbrot.csproj | sed -e "s/C#/C# ${VERSION}/"
