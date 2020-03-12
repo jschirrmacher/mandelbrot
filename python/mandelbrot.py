@@ -37,9 +37,9 @@ class Iterator:
           output += ' '
 
       output += '\n'
-    print output
+    print(output)
 
 t = time.time()
 Iterator()
-print '\nPython ' + platform.python_version() + ' Elapsed %.04f' % (time.time() - t)
+print('\nPython ' + platform.python_version() + ' Elapsed %.04f' % (time.time() - t))
 

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python $(dirname "$0")/mandelbrot.py
+python3 $(dirname "$0")/mandelbrot.py
