@@ -33,11 +33,11 @@ namespace Mandelbrot {
 			for (y = -99; y < 99; y++) {
 				for (x = -99; x < 99; x++) {
 					if (iterate (x / 100.0f, y / 100.0f) == 0)
-						output += "*";
+						output = String.Concat(output, "*");
 					else
-						output += " ";
+						output = String.Concat(output, " ");
 				}
-				output += "\n";
+				output = String.Concat(output, "\n");
 			}
 			DateTime d2 = DateTime.Now;
 			long diff = (long)(d2 - d1).TotalMilliseconds;
