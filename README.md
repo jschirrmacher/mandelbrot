@@ -14,22 +14,22 @@ Naturally, you need to install a compiler and runtime environment for each langu
 
 I tested on my available MacBook Pros (2014 and 2020) and the output looks like this:
 
-```
+```text
 --------------------------------------------------
 Intel® Core™ i5-4288U 4 cores @2.60GHz
 --------------------------------------------------
 C gcc 4.2.1                                  0.668
 JavaScript Node.js v12.13.0                  0.698
-C# 3.1.102                                   1.692
+C# 3.1.102                                   0.937
+Java 13.0.2                                  1.630
 Go go1.14                                    1.798
-Java 1.8.0_121                               1.801
-PHP 7.3.11                                  12.576
+PHP 7.4.3                                   11.610
 Ruby 2.6.0                                  22.782
-Python 2.7.16                               49.591
-Perl v5.18.4                               109.905
+Python 3.7.7                                57.578
+Perl v5.30.1                                99.630
 ```
 
-```
+```text
 --------------------------------------------------
 Intel® Core™ i5-8279U 8 cores @2.40GHz
 --------------------------------------------------

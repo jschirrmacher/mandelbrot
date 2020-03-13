@@ -25,7 +25,7 @@ class Mandelbrot
 		}
 	}
 
-	function Mandelbrot()
+	function __construct()
 	{
 		$output = '';
 		$d1 = microtime(1);
