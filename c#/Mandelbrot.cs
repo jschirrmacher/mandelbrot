@@ -28,20 +28,21 @@ namespace Mandelbrot {
 		static void Main (string[] args) {
 			DateTime d1 = DateTime.Now;
 			int x, y;
-			string output = "";
+
+			StringBuilder output = new StringBuilder();
 
 			for (y = -99; y < 99; y++) {
 				for (x = -99; x < 99; x++) {
 					if (iterate (x / 100.0f, y / 100.0f) == 0)
-						output += "*";
+						output.Append("*");
 					else
-						output += " ";
+						output.Append(" ");
 				}
-				output += "\n";
+				output.Append("\n");
 			}
 			DateTime d2 = DateTime.Now;
 			long diff = (long)(d2 - d1).TotalMilliseconds;
-			Console.WriteLine(output + "\nC# Elapsed " + diff / 1000.0f);
+			Console.WriteLine($"{output} \nC# Elapsed {diff / 1000.0f}");
 		}
 	}
 }
