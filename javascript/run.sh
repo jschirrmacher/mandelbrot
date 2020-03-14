@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node $(dirname "$0")/mandelbrot.js
+NODE_ENV=production node $(dirname "$0")/mandelbrot.js
