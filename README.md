@@ -2,7 +2,7 @@
 
 Runs a computation of the Mandelbrot set in various languages. The variants are designed to be more or less equivalent, printing the output only at the end to reduce the dependency of I/O to a minimum. Thus, only FP comuputation is measured.
 
-To just run the tests for all available languages, simply call `./runAll.sh`
+To just run the tests for all available languages, simply call `./runAll.sh` (you might need to [install some of the programming languages ](#install-programming-languages) first).
 
 To try a single language, do the following steps:
 
@@ -11,6 +11,8 @@ To try a single language, do the following steps:
 2. Run `<language>/run.sh`
 
 Naturally, you need to install a compiler and runtime environment for each language you want to use. The `prepare` script calls the compiler with the required parameters, the `run` script executes the program in the desired language and prints out the elapsed time.
+
+## My results
 
 I tested on my available MacBook Pros (2014 and 2020) and the output looks like this:
 
@@ -45,3 +47,62 @@ Python 2.7.16                               36.193
 Python 3.7.3                                40.375
 Perl v5.30.1                                64.973
 ```
+
+```text
+--------------------------------------------------
+Intel® Core™ i7-3667U 4 cores @2.00GHz
+--------------------------------------------------
+Deno 1.7.0                                   0.685
+JavaScript Node.js v15.6.0                   0.693
+C gcc 12.0.0                                 0.723
+C# 5.0.102                                   0.923
+Java 13.0.2                                  0.963
+Go go1.15.7                                  1.801
+PHP 7.3.11                                  20.613
+Ruby 2.6.3                                  28.989
+Python 3.8.2                                62.049
+Perl v5.18.4                               144.465
+```
+
+## Install programming languages
+
+Most of the languages were already installed on my MacBooks. Howver, some needed to be installed explicitly:
+
+### Javascript / Node.js
+
+From https://github.com/nvm-sh/nvm#install--update-script I've got the command
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+which installs the NVM (Node vesion manager). It allows using different versions of Node.js in parallel. Upgrading is also easy, so it decided to use it.
+
+After installation of nvm, I used it to just
+
+    nvm install 14
+
+which installs (you guessed it) Node.js version 14.
+
+### Java
+
+Java intallation is still straightforward, when you first install [HomeBrew](https://brew.sh):
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+After that, Java 13 can be installed like that:
+
+    brew tap AdoptOpenJDK/openjdk
+    brew install --cask adoptopenjdk13
+
+### deno
+
+The alternative JavaScript runtime deno can be installed with HomeBrew:
+
+    brew install deno
+
+### Go
+
+Go comes as an installer package which can be downloaded from https://golang.org/dl/ - just doubleclick after download and you're in.
+
+### C#
+
+The C# SDK can be fetched from https://dotnet.microsoft.com/download/dotnet-core - I used .NET 5.0
