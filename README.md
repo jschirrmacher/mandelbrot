@@ -2,7 +2,7 @@
 
 Runs a computation of the Mandelbrot set in various languages. The variants are designed to be more or less equivalent, printing the output only at the end to reduce the dependency of I/O to a minimum. Thus, only FP comuputation is measured.
 
-To just run the tests for all available languages, simply call `./runAll.sh` (you might need to [install some of the programming languages ](#install-programming-languages) first).
+To just run the tests for all available languages, call `./runAll.sh` (you might need to [install some of the programming languages ](#install-programming-languages) first).
 
 To try a single language, do the following steps:
 
@@ -11,6 +11,17 @@ To try a single language, do the following steps:
 2. Run `<language>/run.sh`
 
 Naturally, you need to install a compiler and runtime environment for each language you want to use. The `prepare` script calls the compiler with the required parameters, the `run` script executes the program in the desired language and prints out the elapsed time.
+
+## Install programming languages
+
+Most of the languages were already installed on my MacBooks or can be installed with [HomeBrew](https://brew.sh):
+
+    brew install node deno php perl python go
+
+Java and C# need a cask:
+
+    brew install --cask temurin
+    brew install --cask dotnet
 
 ## My results
 
@@ -68,57 +79,14 @@ Perl v5.18.4                               144.465
 --------------------------------------------------
 Intel® Core™ i7-7660U 4 cores @2.5GHz
 --------------------------------------------------
-C gcc 13.1.6                                 0.539
-JavaScript Node.js v18.7.0                   0.561
-Deno 1.24.3                                  0.646
-Java 13.0.2                                  0.730
-C# 6.0.400                                   0.767
-Go go1.19                                    1.680
-PHP 8.1.9                                    7.456
-Ruby 2.6.8                                  16.810
-Python 3.10.6                               31.662
-Perl v5.34.0                                59.518
+C gcc 13.1.6                                 0.536
+JavaScript Node.js v18.7.0                   0.553
+Deno 1.24.3                                  0.570
+Java 18.0.2                                  0.663
+C# 6.0.400                                   0.717
+Go go1.19                                    1.626
+PHP 8.1.9                                    8.366
+Ruby 2.6.8                                  18.758
+Python 3.10.6                               36.016
+Perl v5.34.0                                62.562
 ```
-
-## Install programming languages
-
-Most of the languages were already installed on my MacBooks. Howver, some needed to be installed explicitly:
-
-### Javascript / Node.js
-
-From https://github.com/nvm-sh/nvm#install--update-script I've got the command
-
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-
-which installs the NVM (Node vesion manager). It allows using different versions of Node.js in parallel. Upgrading is also easy, so it decided to use it.
-
-After installation of nvm, I used it to
-
-    nvm install 18
-
-which installs (you guessed it) Node.js version 18.
-
-### Java
-
-Java intallation is still straightforward, when you first install [HomeBrew](https://brew.sh):
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-After that, Java 13 can be installed like that:
-
-    brew tap AdoptOpenJDK/openjdk
-    brew install --cask adoptopenjdk13
-
-### deno
-
-The alternative JavaScript runtime deno can be installed with HomeBrew:
-
-    brew install deno
-
-### Go
-
-Go comes as an installer package which can be downloaded from https://golang.org/dl/ - just doubleclick after download and you're in.
-
-### C#
-
-The C# SDK can be fetched from https://dotnet.microsoft.com/download/dotnet-core - I used .NET 5.0
