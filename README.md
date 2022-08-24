@@ -14,7 +14,7 @@ Naturally, you need to install a compiler and runtime environment for each langu
 
 ## My results
 
-I tested on my available MacBook Pros (2014 and 2020) and the output looks like this:
+I tested on several MacBook Pros and the output looks like this:
 
 ```text
 --------------------------------------------------
@@ -64,6 +64,22 @@ Python 3.8.2                                62.049
 Perl v5.18.4                               144.465
 ```
 
+```text
+--------------------------------------------------
+Intel® Core™ i7-7660U 4 cores @2.5GHz
+--------------------------------------------------
+C gcc 13.1.6                                 0.539
+JavaScript Node.js v18.7.0                   0.561
+Deno 1.24.3                                  0.646
+Java 13.0.2                                  0.730
+C# 6.0.400                                   0.767
+Go go1.19                                    1.680
+PHP 8.1.9                                    7.456
+Ruby 2.6.8                                  16.810
+Python 3.10.6                               31.662
+Perl v5.34.0                                59.518
+```
+
 ## Install programming languages
 
 Most of the languages were already installed on my MacBooks. Howver, some needed to be installed explicitly:
@@ -76,11 +92,11 @@ From https://github.com/nvm-sh/nvm#install--update-script I've got the command
 
 which installs the NVM (Node vesion manager). It allows using different versions of Node.js in parallel. Upgrading is also easy, so it decided to use it.
 
-After installation of nvm, I used it to just
+After installation of nvm, I used it to
 
-    nvm install 14
+    nvm install 18
 
-which installs (you guessed it) Node.js version 14.
+which installs (you guessed it) Node.js version 18.
 
 ### Java
 
